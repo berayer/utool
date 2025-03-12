@@ -2,6 +2,8 @@ import { AppSider } from '@/components/custom/app-sidebar'
 import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { cookies } from 'next/headers'
 import { getMenu } from '../api'
+import { Separator } from '@/components/ui/separator'
+import { AppBreadcrumb } from '@/components/custom/app-breadcrumb'
 
 export default async function Layout({
   children,
@@ -19,7 +21,11 @@ export default async function Layout({
       <AppSider menu={menu} />
       <SidebarInset>
         <header className="flex h-14 shrink-0 items-center gap-2">
-          <SidebarTrigger className="ml-2" />
+          <div className="flex items-center gap-2 px-4">
+            <SidebarTrigger className="-ml-1" />
+            <Separator orientation="vertical" className="mr-2 h-4" />
+            <AppBreadcrumb menu={menu} />
+          </div>
         </header>
         {children}
       </SidebarInset>
