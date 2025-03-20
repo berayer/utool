@@ -1,5 +1,3 @@
-import { act } from 'react'
-
 export async function getMenu() {
   console.log('api: ', '获取用户菜单')
   return [
@@ -8,6 +6,12 @@ export async function getMenu() {
       path: '/',
       label: '首页',
       icon: 'lucide:home',
+    },
+    {
+      id: 4,
+      path: '/price',
+      label: '报价管理',
+      icon: 'lucide:square-menu',
     },
     {
       id: 2,

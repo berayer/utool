@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='zh-cn'>
+    <html lang="zh-cn">
       <body style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
         <NextTopLoader />
         {children}

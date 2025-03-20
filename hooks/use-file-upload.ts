@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { fileCheck, fileUpload, fileMerge } from '@/app/api/file-upload'
+import { fileCheck, fileUpload, fileMerge } from '@/app/v2/file-upload'
 
 const CHUNK_SIZE = 1024 * 1024 * 5 // 分片大小
 

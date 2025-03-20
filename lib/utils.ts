@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 import MD5 from 'spark-md5'
+import { v4 as uuidV4 } from 'uuid'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -32,4 +33,9 @@ export function createChunk(file: File, index: number, chunkSize: number): Promi
     }
     fileReader.readAsArrayBuffer(blob)
   })
+}
+
+/** 返回一个全大写的uuid */
+export function uuid() {
+  return uuidV4().replaceAll('-', '').toUpperCase()
 }
